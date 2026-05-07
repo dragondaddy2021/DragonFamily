@@ -35,24 +35,24 @@
   <style>
     /* ========== A. CSS 變數 ========== */
     :root {
-      /* 主色系 - 暗金酒館 */
+      /* 主色系 - 黑幫金 */
       --color-gold: #C8932E;
       --color-gold-deep: #A07419;
       --color-gold-light: #E8B547;
 
-      /* 深色系 - 木頭感 */
-      --color-dark: #2B1F14;
-      --color-dark-soft: #3D2817;
+      /* 深色系 - 煤黑（給 header / footer 用，襯托暖色內容） */
+      --color-dark: #1C1612;
+      --color-dark-soft: #261D17;
 
-      /* 羊皮紙 - 卡片底色 */
-      --color-paper: #F5E6D3;
-      --color-paper-deep: #E8D4B8;
+      /* 暖橘黃 - body / 卡片 */
+      --color-paper: #FAE7C9;
+      --color-paper-deep: #F0D4A8;
 
-      /* 強調色 */
-      --color-red: #A63D2A;
-      --color-green: #6B8E5A;
+      /* 強調色 - 牛血紅 / 苔綠 */
+      --color-red: #7A1F1F;
+      --color-green: #5A6E4F;
 
-      /* 文字 */
+      /* 文字 - 深木褐（用於暖色底）+ 米色（用於深色 nav/footer） */
       --color-text: #3D2817;
       --color-text-soft: #6B5544;
       --color-text-light: #F5E6D3;
@@ -75,14 +75,15 @@
       color: var(--color-text);
       background-color: var(--color-paper);
       background-image:
-        linear-gradient(rgba(245, 230, 211, 0.95), rgba(245, 230, 211, 0.95)),
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8'/%3E%3CfeColorMatrix values='0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 0 0.1 0 0 0 0.2 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        linear-gradient(rgba(250, 231, 201, 0.94), rgba(250, 231, 201, 0.94)),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.30 0 0 0 0 0.15 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     }
 
     h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-tc-title);
       color: var(--color-dark);
       font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
     a {
@@ -98,14 +99,21 @@
     /* ========== C. Navbar ========== */
     .navbar {
       background-color: var(--color-dark) !important;
-      border-bottom: 3px solid var(--color-gold);
-      box-shadow: var(--shadow-md);
+      background-image:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 30%);
+      border-bottom: 1px solid var(--color-gold-deep);
+      box-shadow:
+        0 0 0 1px rgba(200, 147, 46, 0.18) inset,
+        inset 0 -3px 0 rgba(200, 147, 46, 0.4),
+        inset 0 -4px 0 var(--color-gold),
+        0 6px 24px rgba(200, 147, 46, 0.12);
     }
 
     .navbar .nav-link {
-      color: var(--color-paper) !important;
+      color: var(--color-text-light) !important;
       font-family: var(--font-tc-title);
       font-weight: 500;
+      letter-spacing: 0.04em;
       transition: color 0.2s;
     }
 
@@ -126,7 +134,7 @@
     }
 
     .navbar .bi {
-      color: var(--color-paper);
+      color: var(--color-text-light);
       transition: color 0.2s;
     }
 
@@ -168,14 +176,19 @@
     /* ========== E. 卡片 ========== */
     .card {
       background-color: var(--color-paper-deep);
-      border: 1px solid rgba(160, 116, 25, 0.2);
-      box-shadow: var(--shadow-soft);
-      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(200, 147, 46, 0.35);
+      box-shadow:
+        var(--shadow-soft),
+        inset 0 0 0 1px rgba(200, 147, 46, 0.06);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
+      border-color: var(--color-gold);
+      box-shadow:
+        var(--shadow-gold),
+        inset 0 0 0 1px rgba(200, 147, 46, 0.18);
     }
 
     .card-title {
@@ -196,6 +209,61 @@
       body {
         padding-top: 70px;
       }
+    }
+
+    /* ========== G. 黑幫風格深色覆蓋 ========== */
+    /* Footer: 蓋掉 Bootstrap 的 bg-white，雙金線收邊 */
+    footer.bg-white {
+      background-color: var(--color-dark) !important;
+      color: var(--color-text);
+      border-top: 1px solid var(--color-gold-deep);
+      box-shadow:
+        inset 0 3px 0 rgba(200, 147, 46, 0.4),
+        inset 0 4px 0 var(--color-gold),
+        0 -6px 24px rgba(200, 147, 46, 0.12);
+      padding-top: 16px;
+    }
+    footer a { color: var(--color-gold); }
+    footer a:hover { color: var(--color-gold-light); }
+
+    /* Carousel caption：bg-black 上配香檳金，金邊環繞 */
+    .carousel .bg-black {
+      background-color: rgba(20, 14, 10, 0.78) !important;
+      color: var(--color-text-light);
+      border: 1px solid rgba(200, 147, 46, 0.5);
+      border-left: 3px solid var(--color-gold);
+      padding: 4px 12px;
+      box-shadow: 0 0 0 1px rgba(200, 147, 46, 0.1);
+    }
+
+    /* hr 分隔線：暗金 */
+    hr {
+      border-top: 1px solid var(--color-gold-deep);
+      opacity: 0.5;
+    }
+
+    /* Carousel 控制鈕在深色底上更可見 */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: drop-shadow(0 0 4px rgba(200, 147, 46, 0.6));
+    }
+
+    /* 章節標題使用深色木褐，在暖色底上清楚 */
+    main h2 {
+      color: var(--color-dark);
+    }
+
+    /* 章節標題：雙金線收邊（奢華雙橫飾） */
+    main h2:not(.events-title)::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 1px;
+      background: var(--color-gold);
+      margin: 14px auto 0;
+      box-shadow:
+        0 4px 0 0 var(--color-gold-deep),
+        0 5px 0 0 rgba(200, 147, 46, 0.25);
     }
   </style>
 </head>
@@ -464,9 +532,17 @@
     padding: 12px 16px;
     margin-bottom: 8px;
     background: var(--color-paper-deep);
+    border: 1px solid rgba(200, 147, 46, 0.18);
     border-left: 4px solid var(--color-gold);
     border-radius: 4px;
-    box-shadow: var(--shadow-soft);
+    box-shadow:
+      var(--shadow-soft),
+      inset 0 0 0 1px rgba(200, 147, 46, 0.04);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  #events .event-item:hover {
+    border-color: var(--color-gold);
+    transform: translateX(4px);
   }
   #events .event-date {
     color: var(--color-gold-deep);
