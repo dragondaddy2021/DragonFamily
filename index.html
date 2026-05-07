@@ -235,6 +235,9 @@
                 <a class="nav-link fw-bolder" href="#activity">活動訊息</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link fw-bolder" href="#events">家族活動</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link fw-bolder" href="#aboutus">關於我們</a>
               </li>
               <li class="nav-item">
@@ -407,6 +410,206 @@
     </div>
   <h2 class="py-4 mb-5 text-center fw-bold">2021年家族聚會</h2>
 </div>
+
+<!-- ========== 家族活動年表 ========== -->
+<style>
+  #events {
+    padding: 60px 0 40px;
+  }
+  #events .events-title {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  #events .events-subtitle {
+    text-align: center;
+    color: var(--color-text-soft);
+    margin-bottom: 32px;
+    font-family: var(--font-handwrite);
+    font-size: 1.4rem;
+  }
+  #events .nav-pills {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  #events .nav-pills .nav-link {
+    color: var(--color-text);
+    background-color: var(--color-paper-deep);
+    border: 1px solid var(--color-gold);
+    font-family: var(--font-tc-title);
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 999px;
+    transition: all 0.2s;
+  }
+  #events .nav-pills .nav-link:hover {
+    background-color: var(--color-gold-light);
+  }
+  #events .nav-pills .nav-link.active {
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+    box-shadow: var(--shadow-gold);
+    border-color: var(--color-gold-deep);
+  }
+  #events .event-list {
+    list-style: none;
+    padding: 0;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  #events .event-item {
+    display: flex;
+    gap: 16px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background: var(--color-paper-deep);
+    border-left: 4px solid var(--color-gold);
+    border-radius: 4px;
+    box-shadow: var(--shadow-soft);
+  }
+  #events .event-date {
+    color: var(--color-gold-deep);
+    font-weight: 700;
+    flex-shrink: 0;
+    min-width: 80px;
+    font-family: var(--font-tc-title);
+  }
+  #events .event-title {
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+  @media (max-width: 575.98px) {
+    #events .event-item { flex-direction: column; gap: 4px; }
+    #events .event-date { min-width: 0; }
+  }
+</style>
+
+<section id="events" class="container">
+  <h2 class="events-title fw-bold">家族活動年表</h2>
+  <p class="events-subtitle">Family Gatherings · 2021 – 2026</p>
+
+  <ul class="nav nav-pills" id="yearsTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-2021" data-bs-toggle="pill" data-bs-target="#year-2021" type="button" role="tab" aria-controls="year-2021" aria-selected="false">2021</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-2022" data-bs-toggle="pill" data-bs-target="#year-2022" type="button" role="tab" aria-controls="year-2022" aria-selected="false">2022</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-2023" data-bs-toggle="pill" data-bs-target="#year-2023" type="button" role="tab" aria-controls="year-2023" aria-selected="false">2023</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-2024" data-bs-toggle="pill" data-bs-target="#year-2024" type="button" role="tab" aria-controls="year-2024" aria-selected="false">2024</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="tab-2025" data-bs-toggle="pill" data-bs-target="#year-2025" type="button" role="tab" aria-controls="year-2025" aria-selected="false">2025</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="tab-2026" data-bs-toggle="pill" data-bs-target="#year-2026" type="button" role="tab" aria-controls="year-2026" aria-selected="true">2026</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="yearsTabContent">
+    <div class="tab-pane fade" id="year-2021" role="tabpanel" aria-labelledby="tab-2021">
+      <ul class="event-list">
+        <li class="event-item"><span class="event-date">5/8</span><span class="event-title">波克熊的大稻埕不思議冒險</span></li>
+        <li class="event-item"><span class="event-date">10/16</span><span class="event-title">熊飲及無心戒酒互助會小聚</span></li>
+      </ul>
+    </div>
+
+    <div class="tab-pane fade" id="year-2022" role="tabpanel" aria-labelledby="tab-2022">
+      <ul class="event-list">
+        <li class="event-item"><span class="event-date">5/27</span><span class="event-title">第一次家族大會（西門唱歌吃飯喝酒)</span></li>
+        <li class="event-item"><span class="event-date">6/11</span><span class="event-title">家族探班鬧事團</span></li>
+        <li class="event-item"><span class="event-date">7/23</span><span class="event-title">第一次家族大會（西門唱歌吃飯喝酒）</span></li>
+        <li class="event-item"><span class="event-date">8/14</span><span class="event-title">八月桌遊團家族聚會</span></li>
+        <li class="event-item"><span class="event-date">9/10</span><span class="event-title">中秋電影燒烤唱歌酒吧團</span></li>
+        <li class="event-item"><span class="event-date">10/29</span><span class="event-title">家族同志大拜拜年會（同志大遊行＋西門新千葉火鍋）</span></li>
+        <li class="event-item"><span class="event-date">12/15</span><span class="event-title">北部冬令進補極限團</span></li>
+      </ul>
+    </div>
+
+    <div class="tab-pane fade" id="year-2023" role="tabpanel" aria-labelledby="tab-2023">
+      <ul class="event-list">
+        <li class="event-item"><span class="event-date">1/2</span><span class="event-title">北部布萊梅桌遊例行團</span></li>
+        <li class="event-item"><span class="event-date">1/19</span><span class="event-title">一月唱歌月（松江錢櫃 KTV）暨期初家族大會</span></li>
+        <li class="event-item"><span class="event-date">1/24</span><span class="event-title">勒勒拜年圍爐宴（西門築間、Westland Bar &amp; Bistro）</span></li>
+        <li class="event-item"><span class="event-date">1/25</span><span class="event-title">北投皇池賞鳥取暖團</span></li>
+        <li class="event-item"><span class="event-date">2/8</span><span class="event-title">二月熱炒月暨台北燈會</span></li>
+        <li class="event-item"><span class="event-date">3/19</span><span class="event-title">三月九份月暨基隆潮境公園</span></li>
+        <li class="event-item"><span class="event-date">4/8</span><span class="event-title">四月淡水月暨沙崙情慾防風林</span></li>
+        <li class="event-item"><span class="event-date">5/27</span><span class="event-title">五月喝酒月暨家族兩週年生日暨期中家族大會</span></li>
+        <li class="event-item"><span class="event-date">6/24–25</span><span class="event-title">六月露營月（皇后鎮森林三峽露營區）</span></li>
+        <li class="event-item"><span class="event-date">7/29</span><span class="event-title">七月桌遊月（松江南京錢櫃 KTV）</span></li>
+        <li class="event-item"><span class="event-date">9/28–10/1</span><span class="event-title">九月中秋連假高雄月（駁二、旗津、壽山動物園、夢時代）</span></li>
+        <li class="event-item"><span class="event-date">10/28</span><span class="event-title">十月遊行月暨同志大遊行、西門夯肉殿</span></li>
+        <li class="event-item"><span class="event-date">12/31</span><span class="event-title">十二月跨年暨交換禮物月（貝克街桌遊店）</span></li>
+      </ul>
+    </div>
+
+    <div class="tab-pane fade" id="year-2024" role="tabpanel" aria-labelledby="tab-2024">
+      <ul class="event-list">
+        <li class="event-item"><span class="event-date">1/20</span><span class="event-title">石碇五路財神廟阿比團</span></li>
+        <li class="event-item"><span class="event-date">1/28</span><span class="event-title">一月尾牙月（龍都酒樓）暨寒假期初家族大會</span></li>
+        <li class="event-item"><span class="event-date">2/24–25</span><span class="event-title">二月南投月（武界部落二日遊）</span></li>
+        <li class="event-item"><span class="event-date">3/30</span><span class="event-title">三月烘焙月（士林草原風蒙古火鍋＋士林夜市＋自己做烘焙）</span></li>
+        <li class="event-item"><span class="event-date">3/31</span><span class="event-title">三月蒙藏月（蒙藏文化館＋榕錦時光生活園區＋勉強日式海鮮）</span></li>
+        <li class="event-item"><span class="event-date">5/1</span><span class="event-title">五月家族三週年慶生月（西門好樂迪＋築間幸福鍋物）</span></li>
+        <li class="event-item"><span class="event-date">5/12</span><span class="event-title">五月寡叔叔的周遊列子之旅（高雄場：好樂迪建工＋韓尚宮）</span></li>
+        <li class="event-item"><span class="event-date">6/30</span><span class="event-title">六月桌遊月（貝克街桌遊店＋小尚品精製鍋物）</span></li>
+        <li class="event-item"><span class="event-date">7/4</span><span class="event-title">龍氏家族第一屆 3v3 籃球賽（二重疏洪親水公園）</span></li>
+        <li class="event-item"><span class="event-date">7/13</span><span class="event-title">七月密室逃脫月（笨蛋工作室寶清新館［我們的秘密］＋饒河夜市＋信義大縱酒）</span></li>
+        <li class="event-item"><span class="event-date">7/30</span><span class="event-title">七月平日團（11 pasta＋布萊梅桌遊＋南京錢櫃）</span></li>
+        <li class="event-item"><span class="event-date">8/24</span><span class="event-title">黑殿餐廳＋Terra 巧克力＋巫登益美術</span></li>
+        <li class="event-item"><span class="event-date">8/25</span><span class="event-title">八月保齡球月（三重 E7PLAY＋三和夜市）</span></li>
+        <li class="event-item"><span class="event-date">9/17</span><span class="event-title">九月中秋烤肉月（西門 Sing!Go＋哞哞屋和牛燒肉）</span></li>
+        <li class="event-item"><span class="event-date">10/26</span><span class="event-title">十月遊行月（同志大遊行＋潮肉壽喜燒敦南店）</span></li>
+        <li class="event-item"><span class="event-date">12/14</span><span class="event-title">十二月南部月（錢櫃台南西門店＋富鴻魚肚）</span></li>
+        <li class="event-item"><span class="event-date">12/29</span><span class="event-title">十二月北部 Bonus 月（新莊大魯閣＋北投皇池溫泉）</span></li>
+      </ul>
+    </div>
+
+    <div class="tab-pane fade" id="year-2025" role="tabpanel" aria-labelledby="tab-2025">
+      <ul class="event-list">
+        <li class="event-item"><span class="event-date">1/11</span><span class="event-title">一月尾牙月（西門紅磡港式飲茶＋西門烏托邦酒吧）</span></li>
+        <li class="event-item"><span class="event-date">1/30</span><span class="event-title">一月高雄月（大港參貳牛排館鹽埕店＋愛河吉伊卡哇燈會）</span></li>
+        <li class="event-item"><span class="event-date">2/1</span><span class="event-title">小林 Gary 新年走春團（淡水緣道觀音廟＋北投子溪櫻花步道）</span></li>
+        <li class="event-item"><span class="event-date">2/22</span><span class="event-title">馬友友印度餐廳松江店</span></li>
+        <li class="event-item"><span class="event-date">2/28–3/2</span><span class="event-title">二月臺南月（中西區、安平區）</span></li>
+        <li class="event-item"><span class="event-date">3/22</span><span class="event-title">三月手作月（霞海城隍廟拜月老＋大安暖心廚房）</span></li>
+        <li class="event-item"><span class="event-date">4/3</span><span class="event-title">清明連假淡水八里觀光團（卡滋爆米花工廠）</span></li>
+        <li class="event-item"><span class="event-date">4/5</span><span class="event-title">清明連假華山看啥小展＋三創 VR 樂園＋北車阿克蒂雅女僕咖啡廳</span></li>
+        <li class="event-item"><span class="event-date">4/6</span><span class="event-title">清明連假新莊體育館（TPBL 新北國王 vs 台北戰神）＋千職人日式和風</span></li>
+        <li class="event-item"><span class="event-date">4/6</span><span class="event-title">VOGUE 風格野餐派對</span></li>
+        <li class="event-item"><span class="event-date">4/19</span><span class="event-title">新北貢寮福隆阿比淨灘團＋魚佳餚餐館</span></li>
+        <li class="event-item"><span class="event-date">5/10</span><span class="event-title">金牛慶生趴＋小光歡送會＋路易祈福（主揪：宥佑）</span></li>
+        <li class="event-item"><span class="event-date">5/31</span><span class="event-title">五月台中月（國家漫畫博物館＋宮原眼科＋台中公園＋lalaport）</span></li>
+        <li class="event-item"><span class="event-date">6/21</span><span class="event-title">六月城市尋寶月（家族第一屆城市尋寶對抗賽＋台北捷運踩地雷＋西門真川味）</span></li>
+        <li class="event-item"><span class="event-date">7/13</span><span class="event-title">七月桃園中壢月（Xpark＋華泰名品城＋鍋強強）</span></li>
+        <li class="event-item"><span class="event-date">8/30</span><span class="event-title">八月聯誼月（龍氏家族 vs 發電男友、北車齊文藝室＋京站海底撈）</span></li>
+        <li class="event-item"><span class="event-date">9/13</span><span class="event-title">九月唱歌月（西門 Sing!Go＋燒肉眾＋紅樓 SOL bistro）</span></li>
+        <li class="event-item"><span class="event-date">10/25</span><span class="event-title">十月遊行月（第 23 屆同志大遊行＋大灣碼頭松隆店）</span></li>
+        <li class="event-item"><span class="event-date">12/25</span><span class="event-title">十二月聖誕交換禮物月（台中銀櫃 KTV 旗艦店）</span></li>
+        <li class="event-item"><span class="event-date">12/31</span><span class="event-title">跨 2026 淡水雙煙火＋文化大學煙火</span></li>
+      </ul>
+    </div>
+
+    <div class="tab-pane fade show active" id="year-2026" role="tabpanel" aria-labelledby="tab-2026">
+      <ul class="event-list">
+        <li class="event-item"><span class="event-date">1/11</span><span class="event-title">一月南部尾牙月（臺南布泰象 Boothai＋南紡 A2 館）</span></li>
+        <li class="event-item"><span class="event-date">1/16</span><span class="event-title">騰騰羊肉爐</span></li>
+        <li class="event-item"><span class="event-date">1/24</span><span class="event-title">陽明山茶花展（花卉試驗中心＋花比人嬌）</span></li>
+        <li class="event-item"><span class="event-date">2/3</span><span class="event-title">台北迪化街辦年貨</span></li>
+        <li class="event-item"><span class="event-date">2/27–28</span><span class="event-title">二月北部烏來月（老街＋野菜屋＋泰雅巴萊部落村＋雲仙台車＋66 溫泉）</span></li>
+        <li class="event-item"><span class="event-date">3/5</span><span class="event-title">古亭河濱花海＋客家文化公園＋平安京茶事＋紅棉燈籠＋彩虹酷兒健康中心＋西門燈會</span></li>
+        <li class="event-item"><span class="event-date">3/21</span><span class="event-title">家族籃球隊例行團練（二重疏洪道籃球場）</span></li>
+        <li class="event-item"><span class="event-date">3/22</span><span class="event-title">三月中部野餐月（台中市民廣場＋EqualCafe＋瑪爾斯三溫暖）</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- ========== /家族活動年表 ========== -->
 
 <div class="p-4 p-md-5 mb-5 text-white rounded-3 bg-cover"
   style="background-image: url(https://images.unsplash.com/photo-1415356838286-df6fd593e8b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)">
