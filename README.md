@@ -4,7 +4,7 @@
 
 ## 🔗 線上預覽
 
-- **網站**：https://dragondaddy2021.github.io/demosite/
+- **網站**：https://dragondaddy2021.github.io/DragonFamily/
 - **Facebook**：https://www.facebook.com/dragondaddy2021/
 
 ## 🛠 技術棧
@@ -25,7 +25,7 @@
 ## 📁 專案結構
 
 ```
-demosite/
+DragonFamily/
 ├── index.html
 ├── .gitignore
 ├── LICENSE
